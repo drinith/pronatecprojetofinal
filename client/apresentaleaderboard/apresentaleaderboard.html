@@ -1,0 +1,18 @@
+<template name="apresentaleaderboard">
+    <div class="col-2">
+            <input type="button" class="increment" value="+5">
+            <input type="button" class="decrement" value="-5">
+    </div>    
+    <div class="col-3 menu">
+        <ul>
+            {{#each player}}
+            <li class="player {{classeSelecionado}}">{{name}}: {{score}}</li>
+            {{/each}}
+        </ul>
+    </div>
+    
+     {{#if alunoSelecionado}}
+    <div class="col-6">Aluno selecionado: {{alunoSelecionado.name}} com uma pontuação de {{alunoSelecionado.score}}</div>
+    {{/if}}
+
+</template>

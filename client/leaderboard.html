@@ -1,0 +1,35 @@
+<head>
+    <title>Leaderboard</title>
+</head>
+
+<body>
+    {{>leaderboard}}
+
+</body>
+
+<template name="leaderboard">
+      
+    <div class="header">
+        <div class="titulo col-2">Aluno A+</div>
+        {{>loginButtons}}
+    </div>    
+    <div class="col-12">
+        <button class="btn_adicionar"><img src="./adicionar.png"/></button>
+        <button class="btn_listar"><img src="./listar.png"/></button>
+       <!-- Estrutura Blaze que chama o conteudo do template -->
+       
+    </div>
+    <br>
+    <br>
+    <br>
+
+   
+      
+    
+        {{#if currentUser}}
+       
+            {{> UI.dynamic template= myTemplate}}
+        
+        {{/if}}
+
+</template>
