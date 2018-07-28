@@ -6,6 +6,10 @@ Meteor.publish('thePlayers', function () {
 
 });
 
+Meteor.publish('files.images.all', function () {
+    return Images.find().cursor;
+  });
+
 Meteor.methods({
 
     "insertPlayerData":function(alunoNome){
@@ -13,11 +17,6 @@ Meteor.methods({
         PlayersList.insert({ 'name': alunoNome, 'score': 0, 'criadoPor': currentUserId });
     },
 
-    "modificaScore":function(id,valorScore){
 
-        PlayersList.update(id, { $inc: { score: valorScore } })
-    }
-
-
-
+    
 });
